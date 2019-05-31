@@ -1,0 +1,8 @@
+= ys-scala-tools
+
+Scala tools
+
+== Build status
+Master: image:https://travis-ci.org/ysden123/ys-scala-tools.svg?branch=master[Build Status: master,link=https://travis-ci.org/ysden123/ys-scala-tools]
+
+Develop: image:https://travis-ci.org/ysden123/ys-scala-tools.svg?branch=develop[Build Status: develop,link=https://travis-ci.org/ysden123/ys-scala-tools]
