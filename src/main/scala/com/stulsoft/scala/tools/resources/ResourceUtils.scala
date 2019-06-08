@@ -18,13 +18,13 @@ import scala.util.{Failure, Try}
   */
 object ResourceUtils extends LazyLogging {
   /**
-    * Searches in the resources a list of file names matching a mask
+    * Searches in the resources a list of file names matching a file name suffix
     *
-    * @param fileMask the file name mask; empty - all files
-    * @param folder   specifies a folder; default value is "."
-    * @return the list of file names matching a mask
+    * @param fileNameSuffix the file name suffix; empty - all files
+    * @param folder         specifies a folder; default value is "."
+    * @return the list of file names matching a file name suffix
     */
-  def fileNames(fileMask: String, folder: String = "."): Seq[String] = {
+  def fileNames(fileNameSuffix: String, folder: String = "."): Seq[String] = {
     new File(Thread
       .currentThread()
       .getContextClassLoader
@@ -32,8 +32,8 @@ object ResourceUtils extends LazyLogging {
       .getPath)
       .listFiles(new FileFilter {
         override def accept(pathname: File): Boolean = {
-//          logger.debug(s"pathname.isFile=${pathname.isFile}, pathname.getName=${pathname.getName}")
-          pathname.isFile && pathname.getName.endsWith(fileMask)
+          //          logger.debug(s"pathname.isFile=${pathname.isFile}, pathname.getName=${pathname.getName}")
+          pathname.isFile && pathname.getName.endsWith(fileNameSuffix)
         }
       })
       .map(file => file.getName)
