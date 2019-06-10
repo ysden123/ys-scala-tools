@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2019. Yuriy Stul
+  -->
+
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+               xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <UpdateClient xmlns="http://tempuri.org/">
+            <cardInfo>
+                <CardTypeERR>Client<<CardTypeERR>
+                <CardName>YS test account 2</CardName>
+                <TradeLicenceNumber>vatNum321</TradeLicenceNumber>
+                <VatStatus>Y</VatStatus>
+                <SlpCode>1</SlpCode>
+                <sap_db_name>Webpals</sap_db_name>
+                <QryGroups>
+                    <QryGroups>
+                        <Key>1</Key>
+                        <Value>true</Value>
+                    </QryGroups>
+                    <QryGroups>
+                        <Key>15</Key>
+                        <Value>false</Value>
+                    </QryGroups>
+                    <QryGroups>
+                        <Key>16</Key>
+                        <Value>false</Value>
+                    </QryGroups>
+                </QryGroups>
+                <GroupNum>8</GroupNum>
+                <U_Status>New</U_Status>
+                <CompanyID>vatNum321</CompanyID>
+                <U_CRM_Client_ID>0010x00000hR6dJAAS</U_CRM_Client_ID>
+                <ECVatGroup>TBD</ECVatGroup>
+                <CardFName>YS test name of billing</CardFName>
+            </cardInfo>
+        </UpdateClient>
+    </soap:Body>
+</soap:Envelope>
