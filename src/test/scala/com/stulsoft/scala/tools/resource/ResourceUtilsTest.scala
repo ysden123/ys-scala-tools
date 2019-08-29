@@ -2,7 +2,7 @@
  * Copyright (c) 2019. Yuriy Stul
  */
 
-package com.stulsoft.scala.tools.resources
+package com.stulsoft.scala.tools.resource
 
 import org.scalatest.{FunSuite, Matchers}
 

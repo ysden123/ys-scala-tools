@@ -19,7 +19,7 @@ object SourceUtils extends LazyLogging {
   /**
     * Returns a Source from specified file name.
     *
-    * @param name specifies the file; it may be a file in resources and in JAR as well, or it may be any file
+    * @param name specifies the file; it may be a file in resource and in JAR as well, or it may be any file
     * @return the Source from specified file name.
     */
   def source(name: String): Try[Source] = {
@@ -35,7 +35,13 @@ object SourceUtils extends LazyLogging {
     }
   }
 
-
+  /**
+    * Returns a list of Source from files in a folder according to file names matching to filename name suffix
+    *
+    * @param fileNameSuffix the file name suffix; empty - all files
+    * @param folder         specifies a folder; default value is "."
+    * @return the list of Source from files in a folder according to file names matching to filename name suffix
+    */
   def sources(fileNameSuffix: String, folder: String = "."): Seq[Source] = {
     new File(folder)
       .listFiles(new FileFilter {

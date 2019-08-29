@@ -2,7 +2,7 @@
  * Copyright (c) 2019. Yuriy Stul
  */
 
-package com.stulsoft.scala.tools.resources
+package com.stulsoft.scala.tools.resource
 
 import java.io.{File, FileFilter}
 
@@ -15,7 +15,7 @@ import com.typesafe.scalalogging.LazyLogging
   */
 object ResourceUtils extends LazyLogging {
   /**
-    * Searches in the resources a list of file names matching a file name suffix
+    * Searches in the resource a list of file names matching a file name suffix
     *
     * @param fileNameSuffix the file name suffix; empty - all files
     * @param folder         specifies a folder; default value is "."
