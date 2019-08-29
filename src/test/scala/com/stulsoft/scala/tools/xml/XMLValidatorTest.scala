@@ -7,7 +7,7 @@
   */
 package com.stulsoft.scala.tools.xml
 
-import com.stulsoft.scala.tools.resources.ResourceUtils
+import com.stulsoft.scala.tools.source.SourceUtils
 import org.scalatest.{FunSuite, Matchers}
 
 class XMLValidatorTest extends FunSuite with Matchers {
@@ -18,7 +18,7 @@ class XMLValidatorTest extends FunSuite with Matchers {
   }
 
   test("testValidate valid 2") {
-    val xml = ResourceUtils.source("xml1.xml").get.getLines().mkString
+    val xml = SourceUtils.source("xml1.xml").get.getLines().mkString
     XMLValidator.validate(xml).isSuccess shouldBe true
   }
 
@@ -28,7 +28,7 @@ class XMLValidatorTest extends FunSuite with Matchers {
   }
 
   test("testValidate invalid 2") {
-    val xml = ResourceUtils.source("xml1ERR.xml").get.getLines().mkString
+    val xml = SourceUtils.source("xml1ERR.xml").get.getLines().mkString
     XMLValidator.validate(xml).isSuccess shouldBe false
   }
 
