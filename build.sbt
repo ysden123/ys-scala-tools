@@ -6,7 +6,7 @@ lazy val scalaXmlVersion = "1.2.0"
 
 lazy val commonSettings = Seq(
   organization := "com.stulsoft",
-  version := "1.2.0",
+  version := "1.3.0",
   scalaVersion := "2.13.0",
   scalacOptions ++= Seq(
     "-feature",
