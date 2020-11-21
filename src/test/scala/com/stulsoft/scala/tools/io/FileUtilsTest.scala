@@ -4,12 +4,13 @@
 
 package com.stulsoft.scala.tools.io
 
-import org.scalatest.{FunSuite, Matchers}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers
 
 /**
   * @author Yuriy Stul
   */
-class FileUtilsTest extends FunSuite with Matchers {
+class FileUtilsTest extends AnyFunSuite with Matchers {
 
   test("fileNames") {
     val fileNames = FileUtils.fileNames()

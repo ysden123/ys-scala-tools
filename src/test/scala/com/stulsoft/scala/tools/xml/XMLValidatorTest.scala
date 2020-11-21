@@ -8,9 +8,10 @@
 package com.stulsoft.scala.tools.xml
 
 import com.stulsoft.scala.tools.source.SourceUtils
-import org.scalatest.{FunSuite, Matchers}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers
 
-class XMLValidatorTest extends FunSuite with Matchers {
+class XMLValidatorTest extends AnyFunSuite with Matchers {
 
   test("testValidate valid") {
     val xml = s"""<test>text</test>"""

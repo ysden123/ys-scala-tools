@@ -5,12 +5,13 @@
 package com.stulsoft.scala.tools.source
 
 import com.stulsoft.scala.tools.xml.XMLValidator
-import org.scalatest.{FunSuite, Matchers}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers
 
 /**
   * @author Yuriy Stul
   */
-class SourceUtilsTest extends FunSuite with Matchers {
+class SourceUtilsTest extends AnyFunSuite with Matchers {
 
   test("testValidate invalid 2") {
     val xml = SourceUtils.source("xml1ERR.xml").get.getLines().mkString
@@ -18,12 +19,12 @@ class SourceUtilsTest extends FunSuite with Matchers {
   }
 
   test("source from resource") {
-    val source = SourceUtils.source("logback-test.xml")
+    val source = SourceUtils.source("log4j2-test.xml")
     source.isSuccess shouldBe true
   }
 
   test("source from resource with error") {
-    val source = SourceUtils.source("logback-test.ERR")
+    val source = SourceUtils.source("log4j2-test.ERR")
     source.isFailure shouldBe true
   }
 

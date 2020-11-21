@@ -4,12 +4,13 @@
 
 package com.stulsoft.scala.tools.resource
 
-import org.scalatest.{FunSuite, Matchers}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers
 
 /**
   * @author Yuriy Stul
   */
-class ResourceUtilsTest extends FunSuite with Matchers {
+class ResourceUtilsTest extends AnyFunSuite with Matchers {
 
   test("fileNames empty") {
     val list = ResourceUtils.fileNames("empty")

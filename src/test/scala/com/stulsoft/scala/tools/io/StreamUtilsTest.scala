@@ -4,12 +4,14 @@
 
 package com.stulsoft.scala.tools.io
 
-import org.scalatest.{FunSuite, Matchers}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers
+
 
 /**
   * @author Yuriy Stul
   */
-class StreamUtilsTest extends FunSuite with Matchers {
+class StreamUtilsTest extends AnyFunSuite with Matchers {
 
   test("inputStreams") {
     val iss = StreamUtils.inputStreams(".sbt")

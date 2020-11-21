@@ -1,21 +1,25 @@
 lazy val scalaLoggingVersion = "3.9.2"
-lazy val scalaTestVersion = "3.0.8"
-lazy val scalaCheckVersion = "1.14.0"
-lazy val logbackVersion = "1.2.3"
-lazy val scalaXmlVersion = "1.2.0"
+lazy val scalaTestVersion = "3.2.3"
+lazy val scalaCheckVersion = "1.15.1"
+lazy val scalaXmlVersion = "1.3.0"
+lazy val loggingVersion = "2.14.0"
 
 lazy val commonSettings = Seq(
   organization := "com.stulsoft",
-  version := "1.3.0",
-  scalaVersion := "2.13.0",
+  version := "1.3.1",
+  scalaVersion := "2.13.4",
   scalacOptions ++= Seq(
     "-feature",
     "-language:implicitConversions",
     "-language:postfixOps"),
   libraryDependencies ++= Seq(
-    "com.typesafe.scala-logging" %% "scala-logging" % scalaLoggingVersion,
-    "ch.qos.logback" % "logback-classic" % logbackVersion,
     "org.scala-lang.modules" %% "scala-xml" % scalaXmlVersion,
+
+    "com.typesafe.scala-logging" %% "scala-logging" % scalaLoggingVersion,
+    "org.apache.logging.log4j" % "log4j-api" % loggingVersion,
+    "org.apache.logging.log4j" % "log4j-core" % loggingVersion,
+    "org.apache.logging.log4j" % "log4j-slf4j-impl" % loggingVersion,
+
     "org.scalatest" %% "scalatest" % scalaTestVersion % "test",
     "org.scalacheck" %% "scalacheck" % scalaCheckVersion % "test"
   )
